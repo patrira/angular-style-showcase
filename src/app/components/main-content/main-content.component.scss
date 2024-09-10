@@ -1,14 +1,58 @@
-@import '../../../styles/variables';  // Import global variables
+@import '../../../styles/variables';  
 @import '../../../styles/mixins'; 
 
 .car-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: $spacing-unit;
+    grid-template-columns: repeat(4, 1fr);  
+    gap: $spacing-unit * 2;  
     padding: $spacing-unit;
+    flex: 1;  
+    align-content: stretch;  
+    justify-content: stretch;  
+    height: 100%;  
+    box-sizing: border-box;
+  
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);  
+    }
   
     @media (max-width: 768px) {
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      grid-template-columns: repeat(1, 1fr);  
+    }
+  
+    .car-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 100%;  
+      @include card-shadow;
+  
+      img {
+        width: 100%;  
+        height: auto;  
+      }
+  
+      h2 {
+        font-size: 1.2rem;
+        margin: $spacing-unit 0;
+      }
+  
+      p {
+        margin: 0;
+        padding: $spacing-unit;
+        font-size: 1rem;
+        color: #666;
+      }
+  
+      .price {
+        padding: $spacing-unit;
+        font-weight: bold;
+        font-size: 1.1rem;
+        color: $secondary-color;
+      }
     }
   }
   

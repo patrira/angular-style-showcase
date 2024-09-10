@@ -2,35 +2,56 @@
 @import'../../../styles/mixins';
 
 header {
- 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: $spacing-unit 2 * $spacing-unit;
     background-color: $primary-color;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   
     .logo img {
-      height: 50px;
+      height: 75px;  
+  
+      @media (max-width: 1024px) {  
+        height: 60px;
+      }
+  
+      @media (max-width: 768px) {  
+        height: 50px;
+      }
     }
   
     nav ul {
       list-style: none;
       display: flex;
-      gap: $spacing-unit;
+      gap: $spacing-unit * 2;
+  
       li a {
         color: white;
         text-decoration: none;
         font-weight: bold;
-        &:hover {
-          text-decoration: underline;
+        font-size: 1.2rem; 
+  
+        @media (max-width: 1024px) {  
+          font-size: 1.1rem;
+        }
+  
+        @media (max-width: 768px) {  
+          font-size: 1rem;
         }
       }
     }
   
     .cta {
       button {
-        @include card-shadow;
+        font-size: 1.1rem;  
+        @media (max-width: 1024px) {  
+          font-size: 1rem;
+        }
+  
+        @media (max-width: 768px) {  
+          font-size: 0.9rem;
+        }
       }
     }
   }
