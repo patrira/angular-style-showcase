@@ -1,16 +1,20 @@
 <header>
-  <div class="logo">
-    <img src="https://via.placeholder.com/150x50" alt="Car Rental Logo">
-  </div>
-  <nav>
-    <ul>
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/cars">Cars</a></li>
-      <li><a routerLink="/about">About Us</a></li>
-      <li><a routerLink="/contact">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="cta">
-    <button (click)="toggleTheme()">Toggle Theme</button>  <!-- Theme toggle button -->
-  </div>
-</header>
+    <div class="logo">
+      <img src="https://via.placeholder.com/150x50" alt="Car Rental Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a routerLink="/cars">Cars</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cta">
+      <button routerLink="/cars" class="btn-primary">Book a Car</button>
+    </div>
+    <div class="cta">
+      <button (click)="toggleTheme()">Toggle Theme</button>  
+    </div>
+  </header>
+  

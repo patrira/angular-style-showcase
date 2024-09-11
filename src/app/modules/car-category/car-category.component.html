@@ -1,3 +1,13 @@
 <h1>Car Categories</h1>
 <p>Select from a range of car categories such as SUVs, Sedans, and Sports Cars.</p>
 
+<div class="car-category-grid">
+    <div *ngFor="let car of cars" class="car-card">
+      <img [src]="car.image" alt="{{ car.name }}">
+      <h2>{{ car.name }}</h2>
+      <p>{{ car.description }}</p>
+      <div class="price">Price per day: ${{ car.pricePerDay }}</div>
+    </div>
+  </div>
+  
+
