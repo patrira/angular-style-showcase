@@ -10,11 +10,11 @@
         <li><a routerLink="/contact">Contact</a></li>
       </ul>
     </nav>
+    
     <div class="cta">
-      <button routerLink="/cars" class="btn-primary">Book a Car</button>
-    </div>
-    <div class="cta">
-      <button (click)="toggleTheme()">Toggle Theme</button>  
+      <button (click)="toggleTheme()" class="theme-toggle-btn">
+        <i [class]="currentTheme === 'theme-light' ? 'fas fa-moon' : 'fas fa-sun'"></i>  
+      </button>  
     </div>
   </header>
   
