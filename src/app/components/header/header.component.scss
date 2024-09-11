@@ -3,8 +3,8 @@
 
 header {
   padding: $spacing-unit 2 * $spacing-unit;
-  background-color: var(--background-color);  // Toggle between black and white
-  color: var(--text-color);  // Toggle text color between white and black
+  background-color: var(--background-color);  
+  color: var(--text-color);  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,7 +27,7 @@ header {
     gap: $spacing-unit * 2;
 
     li a {
-      color: var(--text-color);  // Toggle link color with theme
+      color: var(--text-color);  
       text-decoration: none;
       font-weight: bold;
       font-size: 1.2rem;
@@ -45,7 +45,7 @@ header {
   .cta {
     button {
       font-size: 1.1rem;
-      background-color: var(--secondary-color);  // Adjust button color based on theme
+      background-color: var(--secondary-color);  
       color: var(--text-color);
       @media (max-width: 1024px) {
         font-size: 1rem;
@@ -59,10 +59,10 @@ header {
 }
 
 .theme-toggle-btn {
-  background: none;  // Remove background color
+  background: none;  
   border: none;
   cursor: pointer;
   font-size: 1.5rem;
-  color: var(--text-color);  // Adjust icon color based on theme
+  color: var(--text-color);  
   transition: color 0.3s ease;
 }

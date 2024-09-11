@@ -1,8 +1,8 @@
 @import '../../../styles/variables';
 
 footer {
-  background-color: var(--background-color);  // Toggle between black and white
-  color: var(--text-color);  // Toggle text color
+  background-color: var(--background-color);  
+  color: var(--text-color);  
   padding: 2 * $spacing-unit;
   margin-bottom: 0;
 
@@ -24,17 +24,17 @@ footer {
     }
 
     h3, h4 {
-      color: var(--secondary-color);  // Theme-aware heading color
+      color: var(--secondary-color);  
     }
 
     ul {
       list-style: none;
       li a {
-        color: var(--text-color);  // Theme-aware link color
+        color: var(--text-color);  
         text-decoration: none;
 
         &:hover {
-          color: var(--secondary-color);  // Theme-aware hover color
+          color: var(--secondary-color);  
         }
       }
     }

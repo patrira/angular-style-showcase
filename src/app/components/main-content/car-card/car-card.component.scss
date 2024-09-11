@@ -15,8 +15,8 @@
 }
 
 .car-card-content {
-  background-color: var(--background-color);  // Theme-aware background color
-  color: var(--text-color);  // Theme-aware text color
+  background-color: var(--background-color);  
+  color: var(--text-color);  
   padding: 20px;
   border-radius: 10px;
   width: 40%;
@@ -49,8 +49,8 @@
   }
 
   .close-btn {
-    background-color: var(--secondary-color);  // Theme-aware button color
-    color: var(--text-color);  // Theme-aware text color
+    background-color: var(--secondary-color);  
+    color: var(--text-color);  
     padding: 10px 20px;
     border: none;
     border-radius: 5px;

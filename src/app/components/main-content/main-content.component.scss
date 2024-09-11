@@ -11,8 +11,8 @@
   justify-content: stretch;
   height: 100%;
   box-sizing: border-box;
-  background-color: var(--background-color);  // Theme-aware background color
-  color: var(--text-color);  // Theme-aware text color
+  background-color: var(--background-color);  
+  color: var(--text-color);  
 
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
@@ -23,8 +23,8 @@
   }
 
   .car-card {
-    background-color: var(--background-color);  // Theme-aware background color
-    color: var(--text-color);  // Theme-aware text color
+    background-color: var(--background-color);  
+    color: var(--text-color);  
     border-radius: 10px;
     overflow: hidden;
     height: 100%;
@@ -54,14 +54,14 @@
       margin: 0;
       padding: $spacing-unit;
       font-size: 1rem;
-      color: var(--text-color);  // Theme-aware text color
+      color: var(--text-color);  
     }
 
     .price {
       padding: $spacing-unit;
       font-weight: bold;
       font-size: 1.1rem;
-      color: var(--secondary-color);  // Theme-aware secondary color
+      color: var(--secondary-color);  
     }
   }
 
