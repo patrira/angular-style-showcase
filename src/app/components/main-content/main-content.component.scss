@@ -1,74 +1,74 @@
-@import '../../../styles/variables';  
-@import '../../../styles/mixins'; 
+@import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 .car-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);  
-    gap: $spacing-unit * 2;  
-    padding: $spacing-unit;
-    flex: 1;  
-    align-content: stretch;  
-    justify-content: stretch;  
-    height: 100%;  
-    box-sizing: border-box;
-  
-    @media (max-width: 1024px) {
-      grid-template-columns: repeat(2, 1fr);  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: $spacing-unit * 2;
+  padding: $spacing-unit;
+  flex: 1;
+  align-content: stretch;
+  justify-content: stretch;
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--background-color);  // Theme-aware background color
+  color: var(--text-color);  // Theme-aware text color
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .car-card {
+    background-color: var(--background-color);  // Theme-aware background color
+    color: var(--text-color);  // Theme-aware text color
+    border-radius: 10px;
+    overflow: hidden;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s ease forwards;
+    @include card-shadow;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(0) scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-  
-    @media (max-width: 768px) {
-      grid-template-columns: repeat(1, 1fr);  
+
+    img {
+      width: 100%;
+      height: auto;
     }
-  
-    .car-card {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background-color: white;
-      border-radius: 10px;
-      overflow: hidden;
-      height: 100%;  
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 0.8s ease forwards;
-      @include card-shadow;
-      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for smooth animation */
-      cursor: pointer; /* Change cursor to pointer on hover */
-  
-      &:hover {
-        transform: translateY(0) scale(1.05); /* Slightly scale up on hover */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
-      }
-  
-      img {
-        width: 100%;  
-        height: auto;  
-      }
-  
-      h2 {
-        font-size: 1.2rem;
-        margin: $spacing-unit 0;
-      }
-  
-      p {
-        margin: 0;
-        padding: $spacing-unit;
-        font-size: 1rem;
-        color: #666;
-      }
-  
-      .price {
-        padding: $spacing-unit;
-        font-weight: bold;
-        font-size: 1.1rem;
-        color: $secondary-color;
-      }
+
+    h2 {
+      font-size: 1.2rem;
+      margin: $spacing-unit 0;
     }
-  
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+
+    p {
+      margin: 0;
+      padding: $spacing-unit;
+      font-size: 1rem;
+      color: var(--text-color);  // Theme-aware text color
     }
+
+    .price {
+      padding: $spacing-unit;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: var(--secondary-color);  // Theme-aware secondary color
+    }
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }

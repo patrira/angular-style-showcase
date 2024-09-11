@@ -10,7 +10,7 @@ export class HeaderComponent {
 
   constructor(private renderer: Renderer2) {}
 
-  toggleTheme() {
+  toggleTheme(): void {
     if (this.currentTheme === 'theme-light') {
       this.currentTheme = 'theme-dark';
       this.renderer.removeClass(document.body, 'theme-light');
