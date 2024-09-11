@@ -1,9 +1,9 @@
 <div class="car-card-modal">
   <div class="car-card-content">
-    <img [src]="car.image" alt="{{ car.name }}" />
+    <img [src]="car.image" alt="{{ car.name }}">
     <h2>{{ car.name }}</h2>
     <p>{{ car.description }}</p>
     <div class="price">Price per day: ${{ car.pricePerDay }}</div>
-    <button class="close-btn" (click)="closeModal">Close</button>
+    <button class="close-btn" (click)="closeModalWindow()">Close</button>  <!-- Bind close button -->
   </div>
 </div>

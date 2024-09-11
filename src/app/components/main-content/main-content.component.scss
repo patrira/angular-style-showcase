@@ -28,7 +28,11 @@
       border-radius: 10px;
       overflow: hidden;
       height: 100%;  
+      opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
       @include card-shadow;
+
   
       img {
         width: 100%;  
@@ -52,6 +56,12 @@
         font-weight: bold;
         font-size: 1.1rem;
         color: $secondary-color;
+      }
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
       }
     }
   }
