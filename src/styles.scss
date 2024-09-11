@@ -5,3 +5,24 @@
 @import './styles/functions';
 @import './styles/themes';
 
+body {
+    background-color: var(--background-color);  
+    color: var(--text-color);                  
+  }
+  
+  header {
+    background-color: var(--primary-color);     
+  }
+  
+  footer {
+    background-color: var(--primary-color);     
+  }
+  
+  button {
+    background-color: var(--secondary-color);   
+    color: var(--text-color);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+

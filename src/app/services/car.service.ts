@@ -22,84 +22,84 @@ export class CarService {
     {
       id: 1,
       name: 'Tesla Model S',
-      image: '',
+      image: 'assets/images/car1.jpg',  // Path to car1.jpg in the assets folder
       description: 'Experience luxury and performance with this electric car.',
       pricePerDay: 120
     },
     {
       id: 2,
       name: 'Ford Mustang GT',
-      image: '',
+      image: 'assets/images/car2.jpg',  // Path to car2.jpg in the assets folder
       description: 'An iconic American muscle car with incredible power.',
       pricePerDay: 150
     },
     {
       id: 3,
       name: 'BMW 5 Series',
-      image: '',
+      image: 'assets/images/car3.jpg',  // Path to car3.jpg
       description: 'Sleek and refined, the BMW 5 Series offers comfort and style.',
       pricePerDay: 140
     },
     {
       id: 4,
       name: 'Audi A6',
-      image: '',
+      image: 'assets/images/car4.jpg',  // Path to car4.jpg
       description: 'Luxury and technology combined in a powerful package.',
       pricePerDay: 130
     },
     {
       id: 5,
       name: 'Mercedes-Benz E-Class',
-      image: '',
+      image: 'assets/images/car5.jpg',  // Path to car5.jpg
       description: 'A blend of performance, luxury, and technology.',
       pricePerDay: 160
     },
     {
       id: 6,
       name: 'Chevrolet Camaro',
-      image: '',
+      image: 'assets/images/car6.jpg',  // Path to car6.jpg
       description: 'A modern classic, with bold design and power to match.',
       pricePerDay: 130
     },
     {
       id: 7,
       name: 'Porsche 911',
-      image: '',
+      image: 'assets/images/car7.jpg',  // Path to car7.jpg
       description: 'Timeless design and unrivaled performance in one package.',
       pricePerDay: 250
     },
     {
       id: 8,
       name: 'Jeep Wrangler',
-      image: '',
+      image: 'assets/images/car8.jpg',  // Path to car8.jpg
       description: 'Off-road capability meets everyday practicality.',
       pricePerDay: 110
     },
     {
       id: 9,
       name: 'Toyota Camry',
-      image: '',
+      image: 'assets/images/car9.jpg',  // Path to car9.jpg
       description: 'Reliable, efficient, and full of modern features.',
       pricePerDay: 90
     },
     {
       id: 10,
       name: 'Honda Civic',
-      image: '',
+      image: 'assets/images/car10.jpg',  // Path to car10.jpg
       description: 'Compact yet powerful, perfect for city drives.',
       pricePerDay: 80
     },
     {
       id: 11,
       name: 'Range Rover Evoque',
-      image: '',
+      image: 'assets/images/car11.jpg',  // Path to car11.jpg
       description: 'Luxury SUV with unparalleled off-road capabilities.',
       pricePerDay: 170
     },
     {
       id: 12,
       name: 'Nissan GT-R',
-      image: '',
+      image: './assets/images/car12.jpg',  // Path to car12.jpg
       description: 'Legendary performance meets modern innovation.',
       pricePerDay: 220
     }
@@ -109,4 +109,5 @@ export class CarService {
     return this.cars;
   }
 }
+
 

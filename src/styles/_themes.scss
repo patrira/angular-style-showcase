@@ -1,19 +1,26 @@
-$light-theme: (
-  background-color: #ffffff,
-  text-color: #333333
-);
 
-$dark-theme: (
-  background-color: #333333,
-  text-color: #ffffff
-);
+$light-background: #ffffff;
+$light-text-color: #333333;
+$light-primary-color: #3498db;
+$light-secondary-color: #2ecc71;
+
+
+$dark-background: #333333;
+$dark-text-color: #ffffff;
+$dark-primary-color: #2ecc71;
+$dark-secondary-color: #3498db;
 
 .theme-light {
-  background-color: map-get($light-theme, background-color);
-  color: map-get($light-theme, text-color);
+  --background-color: #{$light-background};
+  --text-color: #{$light-text-color};
+  --primary-color: #{$light-primary-color};
+  --secondary-color: #{$light-secondary-color};
 }
 
+
 .theme-dark {
-  background-color: map-get($dark-theme, background-color);
-  color: map-get($dark-theme, text-color);
+  --background-color: #{$dark-background};
+  --text-color: #{$dark-text-color};
+  --primary-color: #{$dark-primary-color};
+  --secondary-color: #{$dark-secondary-color};
 }
