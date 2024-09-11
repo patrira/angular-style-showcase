@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { Car } from '../../../services/car.service';  
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Car } from '../../../services/car.service';
 
 @Component({
   selector: 'app-car-card',
@@ -7,5 +7,10 @@ import { Car } from '../../../services/car.service';
   styleUrls: ['./car-card.component.scss']
 })
 export class CarCardComponent {
-  @Input() car!: Car;  
+  @Input() car!: Car;
+  @Output() closeModal = new EventEmitter<void>();  // Emit an event to close the modal
+
+  closeModalWindow(): void {
+    this.closeModal.emit();  // Emit the close event
+  }
 }

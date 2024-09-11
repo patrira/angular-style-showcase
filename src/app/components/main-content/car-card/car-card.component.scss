@@ -2,46 +2,56 @@
 @import '../../../../styles/mixins';  
 @import '../../../../styles/variables'; 
 
-.car-card {
-    @include card-shadow;
-    padding: $spacing-unit;
-    background-color: white;
+.car-card-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);  // Semi-transparent background
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.car-card-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    text-align: center;
-  
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: $spacing-unit;
-    }
-  
-    h2 {
-      color: $primary-color;
-      font-size: 1.5rem;
-    }
-  
-    p {
-      font-size: 1rem;
-      color: #666;
-    }
-  
-    .price {
-      font-weight: bold;
-      color: $secondary-color;
-      font-size: 1.2rem;
-    }
+    margin-bottom: 10px;
   }
-  
-  @media (max-width: 768px) {
-    .car-card {
-      padding: $spacing-unit / 2;
-      h2 {
-        font-size: 1.25rem;
-      }
-      .price {
-        font-size: 1rem;
-      }
-    }
+
+  h2 {
+    margin: 10px 0;
+    font-size: 1.5rem;
   }
-  
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .price {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .close-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
