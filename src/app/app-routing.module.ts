@@ -6,7 +6,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },  
   { path: 'home', component: MainContentComponent },     
   { path: 'cars', loadChildren: () => import('./modules/car-category/car-category.module').then(m => m.CarCategoryModule) }, // Lazy-loaded route
-  { path: '**', redirectTo: '/home' }  
+  // { path: '**', redirectTo: '/home' }  
 ];
 
 @NgModule({
