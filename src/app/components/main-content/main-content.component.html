@@ -1,5 +1,5 @@
 <div class="car-grid">
-  <div *ngFor="let car of cars" class="car-card" (click)="showCarDetails(car)">
+  <div *ngFor="let car of cars" class="car-card" (click)="showCarDetails(car)"  (keydown)="showCarDetails(car)" tabindex="0" role="button">
     <img [src]="car.image" alt="{{ car.name }}">
     <h2>{{ car.name }}</h2>
     <p>{{ car.description }}</p>
@@ -7,5 +7,5 @@
   </div>
 </div>
 
-<!-- Display the CarCardComponent as a modal when a car is clicked -->
-<app-car-card *ngIf="selectedCar" [car]="selectedCar" (closeModal)="closeModal()"></app-car-card>
+
+<app-car-card *ngIf="selectedCar" [car]="selectedCar" (closeModal)="closeModal()"  (keydown) ="closeModal()" tabindex="0" role="button"></app-car-card>

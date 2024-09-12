@@ -8,9 +8,9 @@ import { Car } from '../../../services/car.service';
 })
 export class CarCardComponent {
   @Input() car!: Car;
-  @Output() closeModal = new EventEmitter<void>();  // Emit an event to close the modal
+  @Output() closeModal = new EventEmitter<void>();  
 
   closeModalWindow(): void {
-    this.closeModal.emit();  // Emit the close event
+    this.closeModal.emit();  
   }
 }

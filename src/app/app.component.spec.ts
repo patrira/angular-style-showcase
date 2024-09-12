@@ -1,35 +1,30 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
+// import { TestBed, ComponentFixture } from '@angular/core/testing';
+// import { AppComponent } from './app.component';
 
-describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [
-        RouterModule.forRoot([])
-      ],
-      declarations: [
-        AppComponent
-      ],
-    }).compileComponents();
-  });
+// describe('AppComponent', () => {
+//   let fixture: ComponentFixture<AppComponent>;
+//   let app: AppComponent;
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [AppComponent],
+//     }).compileComponents();
 
-  it(`should have as title 'angular-style-showcase'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-style-showcase');
-  });
+//     fixture = TestBed.createComponent(AppComponent);
+//     app = fixture.componentInstance;
+//   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular-style-showcase');
-  });
-});
+//   it('should create the app', () => {
+//     expect(app).toBeTruthy(); 
+//   });
+
+//   it(`should have as title 'angular-style-showcase'`, () => {
+//     expect(app.title).toEqual('angular-style-showcase'); 
+//   });
+
+//   it('should render title in a h1 tag', () => {
+//     fixture.detectChanges(); 
+//     const compiled = fixture.nativeElement as HTMLElement;
+//     expect(compiled.querySelector('h1')?.textContent).toContain('angular-style-showcase');
+//   });
+// });

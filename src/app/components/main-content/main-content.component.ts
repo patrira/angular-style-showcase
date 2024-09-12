@@ -8,7 +8,7 @@ import { CarService, Car } from '../../services/car.service';
 })
 export class MainContentComponent implements OnInit {
   cars: Car[] = [];
-  selectedCar: Car | null = null;  // Store the clicked car
+  selectedCar: Car | null = null;  
 
   constructor(private carService: CarService) { }
 
@@ -17,10 +17,10 @@ export class MainContentComponent implements OnInit {
   }
 
   showCarDetails(car: Car): void {
-    this.selectedCar = car;  // Store the clicked car
+    this.selectedCar = car;  
   }
 
   closeModal(): void {
-    this.selectedCar = null;  // Close the modal
+    this.selectedCar = null;  
   }
 }

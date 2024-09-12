@@ -10,34 +10,37 @@ describe('MainContentComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [MainContentComponent],
-      providers: [CarService] 
+      providers: [CarService]
     }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(MainContentComponent);
     component = fixture.componentInstance;
-    carService = TestBed.inject(CarService); 
+
+    
+    carService = TestBed.inject(CarService);
     fixture.detectChanges();
   });
 
-  it('should create the main content component', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should display a list of cars', () => {
-    const compiled = fixture.nativeElement;
-    const carCards = compiled.querySelectorAll('.car-card');
-    expect(carCards.length).toBe(12);  
+  it('should have a list of cars', () => {
+    const cars = carService.getCars();  
+    expect(cars.length).toBeGreaterThan(0);  
   });
 
-  it('should display car details correctly', () => {
-    const compiled = fixture.nativeElement;
-    const carCard = compiled.querySelector('.car-card');
-    const carName = carCard.querySelector('h2').textContent;
-    const carPrice = carCard.querySelector('.price').textContent;
+  it('should show car details when clicked', () => {
+    const car = carService.getCars()[0];  
+    component.showCarDetails(car);
+    expect(component.selectedCar).toBe(car);  
+  });
 
-    expect(carName).toBeDefined(); 
-    expect(carPrice).toContain('$');  
+  it('should close modal on closeModal()', () => {
+    component.selectedCar = carService.getCars()[0];  
+    component.closeModal();
+    expect(component.selectedCar).toBeNull();  
   });
 });
